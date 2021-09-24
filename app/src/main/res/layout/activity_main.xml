@@ -7,82 +7,89 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginTop="97dp"
         android:text="Calculator"
         android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText1"
-        app:layout_constraintEnd_toEndOf="@+id/editText1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Integer 1"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:minHeight="48dp"
+        android:text="Number 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="1dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Integer 2"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAdd"
-        app:layout_constraintStart_toEndOf="@+id/buttonAdd"
+        android:minHeight="48dp"
+        android:text="Number 2"
+        app:layout_constraintEnd_toEndOf="@+id/editText1"
         app:layout_constraintTop_toBottomOf="@+id/editText1" />
 
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="handleAddButton"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="11dp"
         android:text="+"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMinus"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonMinus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_constraintBottom_toBottomOf="@+id/editText2"
-        android:layout_marginEnd="2dp"
-        android:text="-"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonAdd" />
-
-    <Button
-        android:id="@+id/buttonMult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="1dp"
-        android:text="X"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        android:onClick="handleAddButton"
+        app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:text="/"
+        android:text="-"
+        android:onClick="handleMinusButton"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonMult"
-        app:layout_constraintTop_toTopOf="@+id/buttonMult" />
+        app:layout_constraintStart_toEndOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="11dp"
+        android:text="X"
+        android:onClick="handleMultButton"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="/"
+        android:onClick="handleDivButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
